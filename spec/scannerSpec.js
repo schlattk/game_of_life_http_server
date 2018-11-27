@@ -11,13 +11,13 @@ describe('Scanner', () => {
   it('counts the number of X neighbours correctly for corner cells', () => {
     game = new Game(5, 5);
     game.seed(0);
-    expect(scanner.scan(game.grid, 0, 4)).toEqual(3);
-    expect(scanner.scan(game.grid, 4, 0)).toEqual(3);
+    expect(scanner.scan(game.grid, 0, 4)).toEqual(8);
+    expect(scanner.scan(game.grid, 4, 0)).toEqual(8);
   });
   it('counts the number of X neighbours correctly for edge cells', () => {
     game = new Game(5, 5);
     game.seed(0);
-    expect(scanner.scan(game.grid, 0, 1)).toEqual(5);
-    expect(scanner.scan(game.grid, 4, 2)).toEqual(5);
+    expect(scanner.scan(game.grid, 0, 1)).toEqual(8);
+    expect(scanner.scan(game.grid, 4, 2)).toEqual(8);
   });
 });

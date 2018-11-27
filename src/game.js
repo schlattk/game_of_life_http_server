@@ -15,7 +15,6 @@ class Game {
   };
   move () {
     if (this.make) { this.grid = extractor.extract() }
-    console.log(this.make);
     var length = this.grid.length;
     var counter_grid = new Array(length);
     for(let i = 0; i < length; i ++){ counter_grid[i] = new Array(length) };

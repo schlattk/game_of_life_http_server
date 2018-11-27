@@ -25,7 +25,7 @@ describe('Game', function () {
     game.seed(0)
     game.move();
     expect(game.grid[2][2]).toEqual('O');
-    expect(game.grid[0][0]).toEqual('X');
+    expect(game.grid[0][0]).toEqual('O');
     expect(game.grid[2][4]).toEqual('O');
   });
   it('changes the cells according to the rules of Game of Life example 2', () => {

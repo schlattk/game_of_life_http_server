@@ -2,7 +2,7 @@
 
 To run the project install http-server globally: npm install http-server -g
 
-the run the server with: http-server
+then run the server with: http-server
 
 click on game_of_life.html to run the app
 
