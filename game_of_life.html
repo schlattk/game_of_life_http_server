@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Game_of_Life</title>
+</head>
+
+<body>
+
+  <h1 >GAME OF LIFE</h1>
+  <form id = 'form'>
+  <input type="button" data-action = "start-button" value="run" id="start">
+  <input type="button" data-action = "stop-button" value="stop" id="stop">
+  <input type="button" data-action = "reset-button" value="start&reset" id="reset">
+  <input type="button" data-action = "make-button" value="blank" id="blank">
+  </form>
+
+<container id = 'container'>
+<div id = 'grid'>
+<p>mm</p>
+</div>
+</container>
+
+</body>
+<script src="src/game.js"></script>
+<script src="src/printer.js"></script>
+<script src="src/fieldsToCheck.js"></script>
+<script src="src/randomizer.js"></script>
+<script src="src/scanner.js"></script>
+<script src="src/initializer.js"></script>
+<script src="src/startstop.js"></script>
+<script src="src/event.js"></script>
+<script src="src/extractor.js"></script>
+</html>
