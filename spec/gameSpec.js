@@ -39,4 +39,40 @@ describe('Game', function () {
     expect(game.grid[1][2]).toEqual('X');
     expect(game.grid[2][4]).toEqual('O');
   });
+  it('changes the cells according to the rules of Game of Life on left side edge', () => {
+    game = new Game(5, 5);
+    game.seed(1)
+    game.grid[1][0] = 'X';
+    game.grid[2][0] = 'X';
+    game.grid[3][0] = 'X';
+    game.move();
+    expect(game.grid[2][4]).toEqual('X');
+  });
+  it('changes the cells according to the rules of Game of Life on top edge', () => {
+    game = new Game(5, 5);
+    game.seed(1);
+    game.grid[0][1] = 'X';
+    game.grid[0][2] = 'X';
+    game.grid[0][3] = 'X';
+    game.move();
+    expect(game.grid[4][2]).toEqual('X');
+  });
+  it('changes the cells according to the rules of Game of Life on rigth side edge', () => {
+    game = new Game(5, 5);
+    game.seed(1)
+    game.grid[1][4] = 'X';
+    game.grid[2][4] = 'X';
+    game.grid[3][4] = 'X';
+    game.move();
+    expect(game.grid[2][0]).toEqual('X');
+  });
+  it('changes the cells according to the rules of Game of Life on bottom edge', () => {
+    game = new Game(5, 5);
+    game.seed(1);
+    game.grid[4][1] = 'X';
+    game.grid[4][2] = 'X';
+    game.grid[4][3] = 'X';
+    game.move();
+    expect(game.grid[0][2]).toEqual('X');
+  });
 });

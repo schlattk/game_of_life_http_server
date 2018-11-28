@@ -12,17 +12,10 @@
 
 const fieldsToCheck = (function () {
   let checkFields = function (grid, x, y) {
-    let length = grid.length - 1;
-    let rep = function (y) {
-      let result;
-      if (y < 0){ result = length }
-      else if (y > length){ result = 0 }
-      else { result = y }
-      return result
-    };
-    let fields = [grid[x][rep(y-1)], grid[x][rep(y+1)]];
-    grid[x-1] ? fields.push(grid[x-1][y], grid[x-1][rep(y-1)], grid[x-1][rep(y+1)]) : fields.push(grid[x+length][y], grid[x+length][rep(y-1)], grid[x+length][rep(y+1)]);
-    grid[x+1] ? fields.push(grid[x+1][y], grid[x+1][rep(y+1)], grid[x+1][rep(y-1)]) : fields.push(grid[x-length][y], grid[x-length][rep(y+1)], grid[x-length][rep(y-1)]);
+    let len = grid.length - 1;
+    let fields = [grid[x][rep(y-1, len)], grid[x][rep(y+1, len)]];
+    grid[x-1] ? fields.push(grid[x-1][y], grid[x-1][rep(y-1, len)], grid[x-1][rep(y+1, len)]) : fields.push(grid[x+len][y], grid[x+len][rep(y-1, len)], grid[x+len][rep(y+1, len)]);
+    grid[x+1] ? fields.push(grid[x+1][y], grid[x+1][rep(y+1, len)], grid[x+1][rep(y-1, len)]) : fields.push(grid[x-len][y], grid[x-len][rep(y+1, len)], grid[x-len][rep(y-1, len)]);
     return fields
   };
   return { fields :checkFields }
