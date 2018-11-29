@@ -20,7 +20,6 @@ describe('extractor', () => {
   });
   it('array should have a length of two', () => {
     let list = extractor.extract();
-    console.log(list);
     expect(list[0].length).toBe(2);
   })
   it('array should have a length of two', () => {

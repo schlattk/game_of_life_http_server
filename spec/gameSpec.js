@@ -55,6 +55,7 @@ describe('Game', function () {
     game.grid[0][2] = 'X';
     game.grid[0][3] = 'X';
     game.move();
+    console.log(game.grid)
     expect(game.grid[4][2]).toEqual('X');
   });
   it('changes the cells according to the rules of Game of Life on rigth side edge', () => {
